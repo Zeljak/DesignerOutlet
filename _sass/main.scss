@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "./_utilities";
+
+@import "../node_modules/bulma/bulma";
+
+//GENERAL
+.body,
+html {
+  max-width: 100vw;
+  margin: 0;
+  font-family: $family-primary;
+  background-color: #eeeeee;
+}
+
+h1 {
+  font-family: $family-secondary;
+  color: black;
+
+  @include for-phone {
+    font-size: 100px;
+    line-height: 80px;
+  }
+  @include for-tablet-portrait {
+    font-size: 100px;
+  }
+  @include for-tablet-landscape {
+    font-size: 100px;
+  }
+  @include for-desktop {
+    font-size: 120px;
+  }
+  @include for-big-desktop {
+    font-size: 120px;
+  }
+}
+
+.container-video {
+  @include for-phone {
+    max-width: 100vw;
+    padding: 0;
+  }
+  @include for-tablet-portrait {
+    max-width: 100vw;
+    padding: 0;
+  }
+  @include for-tablet-landscape {
+    max-width: 100vw;
+    padding: 0;
+  }
+  @include for-desktop {
+    max-width: 100vw;
+    padding: 0;
+  }
+  @include for-big-desktop {
+    max-width: 90vw;
+    margin: 40px auto;
+  }
+}
+
+h3 {
+  font-family: $family-secondary;
+  color: black;
+
+  @include for-phone {
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+  }
+  @include for-tablet-portrait {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  @include for-tablet-landscape {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  @include for-desktop {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  @include for-big-desktop {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}
+
+.titles-wrapper {
+  @include for-phone {
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  @include for-desktop {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.stripe {
+  color: #eeeeee;
+  background: repeating-linear-gradient(
+    331deg,
+    #aaa8ad,
+    #aaa8ad 2px,
+    #eeeeee 2px,
+    #eeeeee 4px
+  );
+
+  @include for-phone {
+    line-height: 3px;
+    margin: 10% auto;
+    max-width: 100vw;
+  }
+  @include for-tablet-portrait {
+    line-height: 7px;
+    margin: 5% auto;
+    max-width: 100vw;
+  }
+  @include for-tablet-landscape {
+    line-height: 7px;
+    margin: 5% auto;
+    max-width: 100vw;
+  }
+  @include for-desktop {
+    line-height: 10px;
+    margin: 5% auto;
+    max-width: 90vw;
+  }
+  @include for-big-desktop {
+    line-height: 10px;
+    margin: 5% auto;
+    max-width: 90vw;
+  }
+}
+
+a {
+  color: black;
+}
+a:hover,
+a:active {
+  color: #ff06dd;
+}
+
+p {
+  font-family: $family-primary;
+  color: black;
+  text-align: center;
+
+  @include for-phone {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  @include for-tablet-landscape {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+span {
+  font-weight: bold;
+}
+
+.container-wrapper {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.container-wrapper2 {
+  max-width: 80vw;
+  margin: auto;
+  @include for-big-desktop {
+    max-width: 60vw;
+  }
+  @include for-desktop {
+    max-width: 70vw;
+  }
+}
+
+h2 {
+  font-family: $family-secondary;
+  color: black;
+  margin: 3% auto;
+  @include for-phone {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: center;
+  }
+  @include for-tablet-portrait {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: right;
+  }
+  @include for-tablet-landscape {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: right;
+  }
+  @include for-desktop {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: right;
+  }
+  @include for-big-desktop {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: right;
+  }
+}
+
+.photo-wrapper {
+  max-width: 80vw;
+  margin: 5% auto;
+  @include for-phone {
+    display: flex;
+    flex-direction: column;
+  }
+  @include for-tablet-portrait {
+    display: flex;
+    flex-direction: column;
+  }
+  @include for-tablet-landscape {
+    display: flex;
+    flex-direction: column;
+  }
+  @include for-desktop {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  @include for-big-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+h4 {
+  font-family: $family-secondary;
+  color: black;
+
+  @include for-phone {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 15% auto;
+  }
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  @include for-tablet-landscape {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  @include for-desktop {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: right;
+  }
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+//FOOTER
+.footer {
+  background-color: #eeeeee;
+}
+
+h6 {
+  font-family: $family-primary;
+  color: black;
+  text-align: center;
+  @include for-phone {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  @include for-tablet-portrait {
+    font-size: 18px;
+    line-height: 42px;
+  }
+  @include for-tablet-landscape {
+    font-size: 18px;
+    line-height: 42px;
+  }
+  @include for-desktop {
+    font-size: 18px;
+    line-height: 42px;
+  }
+  @include for-big-desktop {
+    font-size: 18px;
+    line-height: 42px;
+  }
+}
+
+.container-footer {
+  h6,
+  a {
+    padding: 20px;
+  }
+
+  @include for-tablet-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 20px;
+  }
+
+  @include for-phone {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}
